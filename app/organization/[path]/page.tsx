@@ -1,5 +1,6 @@
 import { OrganizationView } from "@daveyplate/better-auth-ui";
 import { organizationViewPaths } from "@daveyplate/better-auth-ui/server";
+import Main from "@/components/layout/main";
 
 export const dynamicParams = false;
 
@@ -15,8 +16,8 @@ export default async function OrganizationPage({
   const { path } = await params;
 
   return (
-    <main className="max-w-7xl mx-auto flex justify-center p-4 md:p-6">
+    <Main>
       <OrganizationView path={path} />
-    </main>
+    </Main>
   );
 }
