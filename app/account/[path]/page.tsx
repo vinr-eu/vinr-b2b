@@ -15,7 +15,7 @@ export default async function AccountPage({
   const { path } = await params;
 
   return (
-    <main className="flex min-h-screen items-center justify-center p-4 md:p-6">
+    <main className="max-w-7xl mx-auto flex justify-center p-4 md:p-6">
       <AccountView path={path} />
     </main>
   );

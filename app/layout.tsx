@@ -4,6 +4,7 @@ import "./globals.css";
 import type { ReactNode } from "react";
 import { Toaster } from "@/components/ui/sonner";
 import { Providers } from "@/app/providers";
+import Header from "@/components/layout/header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,11 +27,14 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
         <Toaster />
       </body>
     </html>
